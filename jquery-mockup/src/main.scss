@@ -1,0 +1,364 @@
+@import "~bootstrap/scss/bootstrap";
+
+* {
+    box-sizing: border-box;
+  }
+  
+  header {
+    width: 100%;
+    height: 220px;
+    background: url("./imgs/climbing-wall-banner.png") no-repeat;
+  }
+  
+  .container {
+    position: relative;
+  }
+  
+  #site-title {
+    padding-left: 260px;
+  }
+  
+  .pad-left-20 {
+    padding-left: 20px;
+  }
+  
+  .right {
+    float: right;
+  }
+  
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  
+  .login-btn {
+    margin-top: 40px;
+    margin-left: 120px;
+    color: black;
+    font-family: Verdana;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 10%;
+    letter-spacing: -0.02em;
+    &:hover {
+      color: rgb(0, 208, 208);
+      border: 1px solid black;
+    }
+  }
+  
+  .social-networking {
+    margin-top: 40px;
+    margin-left: 140px;
+  }
+  
+  .fa {
+    padding: 15px;
+    font-size: 30px;
+    width: 60px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 100%;
+  }
+  
+  .fa-facebook {
+    margin-right: 20px;
+    background: #3B5998;
+    color: white;
+    &:hover {
+      color: beige;
+    }
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  #navbar-icon {
+    padding-bottom: 10px;
+  }
+  
+  .col-sm-7 {
+    height: 150px;
+  }
+  
+  .margin-left-40 {
+    margin-left: 40px;
+  }
+  
+  .right {
+    float: right;
+  }
+  
+  #main-content {
+    height: 400px;
+    background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(0, 128, 128, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 128, 128, 1)), color-stop(100%, rgba(255, 255, 255, 1)));
+    background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(0, 128, 128, 1) 100%);
+    background: -o-linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(0, 128, 128, 1) 100%);
+    background: -ms-linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(0, 128, 128, 1) 100%);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(0, 128, 128, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008080', endColorstr='#ffffff',GradientType=0 );
+    background-position: top;
+    background-repeat: repeat-x;
+  }
+  
+  #submenu {
+    background-color: rgb(0, 224, 224, 0.2);
+    border: 1px solid rgb(0, 224, 224, 0.4);
+    a {
+      padding-left: 30px;
+      &:first-child {
+        padding-left: 0px;
+      }
+    }
+  }
+  
+  /* Login Page Content Styling ************************************************************** */
+  
+  #loginCardDiv {
+    margin-top: 5px;
+  }
+  
+  #climbing-wall-background {
+    background: url("./imgs/wall-closeup.jpg");
+  }
+  
+  #loginUsernameRetrieve, #loginPasswordRetrieve {
+    position: relative;
+    top: 5px;
+    border: none;
+    color: deepskyblue;
+    background-color: white;
+  }
+  
+  #loginUsernameRetrieve:hover, #loginPasswordRetrieve:hover {
+    color: darkblue;
+  }
+  
+  #loginSubmitBtn {
+    float: right;
+  }
+  
+  #loginRegister {
+    text-align: center;
+    margin-top: 20px;
+    .card-title {
+      text-align: center;
+    }
+    > small {
+      text-align: center;
+      color: blue;
+    }
+  }
+  
+  #loginRegisterBtn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+  
+  #loginRecoverDetailsPanel, #loginRegisterNewPanel {
+    display: none;
+  }
+  
+  #loginCloseRecover {
+    float: right;
+  }
+  
+  #loginRecoverDetails {
+    width: 250px;
+  }
+  
+  #loginRecoverDetailsBtn {
+    margin-top: 15px;
+  }
+  
+  #loginRegisterWrapperDiv {
+    width: 350px;
+    height: 444px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    resize: vertical;
+    overflow: auto;
+  }
+  
+  #loginRegisterViaSocialDiv {
+    background-color: rgba(255, 255, 255, 0.7);
+    resize: vertical;
+    overflow: auto;
+  }
+  
+  #loginRegisterEmailDiv, #loginRegisterFbDiv {
+    text-align: center;
+    margin: 10px;
+  }
+  
+  .btn-email, .btn-facebook, .btn-email:hover, .btn-facebook:hover {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .btn-email {
+    background-color: lightcoral;
+    border-color: lightcoral;
+    &:hover {
+      border-color: indianred;
+      background-color: indianred;
+    }
+  }
+  
+  .btn-facebook {
+    background-color: #336799;
+    border-color: #336799;
+    &:hover {
+      background-color: #264d73;
+      border-color: #24486b;
+    }
+  }
+  
+  #loginRegisterEmailIcon, #loginRegisterFbIcon {
+    border-style: none;
+    vertical-align: middle;
+    height: 24px;
+    margin: -5px 8px 0 0;
+    padding: 0;
+  }
+  
+  /*  Tracker Page Content Styling ************************************************************** */
+  
+  #trackerInputExerciseDatabase {
+    margin-left: 5px;
+    width: 250px;
+    margin-bottom: 5px;
+  }
+  
+  #exerciseSearchBtn {
+    margin-left: 5px;
+  }
+  
+  #trackerMatchingExercise {
+    width: 335px;
+  }
+  
+  #trackerSelectExerciseDropdown {
+    width: 250px;
+  }
+  
+  #trackerCountFields {
+    position: relative;
+    top: 40px;
+    label {
+      margin-right: 5px;
+    }
+  }
+  
+  #trackerRepCount, #trackerSetCount {
+    display: inline;
+    width: 60px;
+  }
+  
+  #arrowContainer {
+    line-height: 221px;
+    text-align: center;
+  }
+  
+  #addExercise {
+    border-radius: 30%;
+    display: inline-block;
+    > {
+      i {
+        color: black;
+        width: 100%;
+        text-align: center;
+      }
+      input {
+        background: none;
+        color: white;
+        padding: 0;
+        border: 0;
+      }
+    }
+  }
+  
+  #addedExercises {
+    height: 205px;
+  }
+  
+  #trackerAddedExercisePane {
+    height: 85%;
+  }
+  
+  #trackerSaveAdded {
+    float: right;
+    margin-top: 10px;
+  }
+  
+  /* Routes Page Content Styling ************************************************************** */
+  
+  #addNewRouteBtn {
+    margin-left: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  #plusIcon {
+    text-shadow: 1px 1px 1px #ccc;
+    font-size: 1em;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    padding: 3px;
+    width: 20px;
+  }
+  
+  #newRouteForm {
+    margin: 0px;
+    margin-top: 10px;
+  }
+  
+  #newRouteCard {
+    display: none;
+    position: relative;
+    width: 100%;
+  }
+  
+  #newRouteCardBody {
+    position: relative;
+    width: 100%;
+  }
+  
+  #routesNewRouteName {
+    margin-left: 3px;
+    display: inline;
+    width: 200px;
+  }
+  
+  #routeTypes, #topRopeCheck, #routesNewRouteGrade, #routesNewRoutePitchesDiv, #firstAscentCheck, #routeSafety, #routesNewRouteAttemptsDiv {
+    margin-left: 20px;
+  }
+  
+  #routesNewRoutePitches, #routesNewRouteAttempts {
+    width: 100px;
+    display: inline-block;
+  }
+  
+  #topRopeCheck, #routesNewRouteGradeVS, #routesNewRouteGradeYDS, #routesNewRoutePitchesDiv, #routeSafety {
+    display: none;
+  }
+  
+  #routeDetailsDiv {
+    margin-top: 20px;
+  }
+  
+  #routesNewRouteSubmitDiv {
+    position: absolute;
+    right: 40px;
+  }
+  
+  #myRoutesTable {
+    margin-top: 20px;
+  }
