@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel=stylesheet href="style.css">
+        
+        <title>Climb Right</title>
+    </head>
+    <body>
+        <div id="header-placeholder"></div>
+        <div class="container-fluid" id="main-content">
+            <div id="submenuAndBreadcrumbs" class="submenucontainer">
+                <div class="submenureserve">
+                    <!-- enter reserve -->
+                    <div class="content submenu container">
+                        <nav class="navbar navbar-expand-sm navbar-dark" id="submenu">
+                            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                <div class="navbar-nav mr-auto">
+                                    <a class="nav-item nav-link" href="tracker.html">My Tracker</a>
+                                    <a class="nav-item nav-link active" href="routes.html">My Routes</a>
+                                    <a class="nav-item nav-link" href="#">My Progress</a>
+                                </div>
+                                <div class="navbar-nav ml-auto form-inline">
+                                    <input type="text" readonly class="form-control" id="dateField"/>
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>    
+                </div>
+            </div>
+            <div id="main" class="container">
+                <h2 class="main-title">My Routes</h2>
+                <div class="row">
+                    <button type="button" class="btn btn-warning btn-lg" id="addNewRouteBtn">
+                        <i class="fa fa-plus-circle" aria-hidden="true" id="plusIcon"></i>
+                        Add a new route
+                    </button>
+                </div>
+                <div class="row" id="newRouteForm">
+                    <div class="card" id="newRouteCard">
+                        <div class="card-body" id="newRouteCardBody">
+                            <form>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div id="routesNewRouteNameDiv">
+                                            <label for="routesNewRouteName">Name:</label>
+                                            <input type="text" class="form-control" id="routesNewRouteName" autocomplete="off">
+                                        </div>
+                                        <div class="btn-group" data-toggle="buttons" aria-label="Route Types" id="routeTypes">
+                                            <label class="btn btn-outline-dark">
+                                                <input type="radio" name="routetypes" value="YDS">
+                                                Trad
+                                            </label>
+                                            <label class="btn btn-outline-dark">
+                                                <input type="radio" name="routetypes" value="YDS">
+                                                Sport
+                                            </label>
+                                            <label class="btn btn-outline-dark">
+                                                <input type="radio" name="routetypes" value="VS">
+                                                Boulder
+                                            </label>
+                                        </div>
+                                        <div class="btn-group" data-toggle="buttons" id="topRopeCheck">
+                                            <label class="btn btn-outline-dark">
+                                                <input type="checkbox" name="toprope" autocomplete="off">
+                                                Top Rope
+                                            </label>
+                                        </div>
+                                        <div id="routesNewRouteGrade">
+                                            <label for="routesNewRouteGrade">Grade:</label>
+                                            <div class="desc" id="routesNewRouteGradeVS">
+                                                <select class="form-control">
+                                                    <option>V0</option>
+                                                    <option>V1</option>
+                                                    <option>V2</option>
+                                                    <option>V3</option>
+                                                    <option>V4</option>
+                                                    <option>V5</option>
+                                                    <option>V6</option>
+                                                    <option>V7</option>
+                                                    <option>V8</option>
+                                                    <option>V9</option>
+                                                    <option>V10</option>
+                                                    <option>V11</option>
+                                                    <option>V12</option>
+                                                    <option>V13</option>
+                                                </select>
+                                            </div>
+                                            <div class="desc" id="routesNewRouteGradeYDS">
+                                                <select class="form-control">
+                                                    <option>5.3</option>
+                                                    <option>5.4</option>
+                                                    <option>5.5</option>
+                                                    <option>5.6</option>
+                                                    <option>5.7</option>
+                                                    <option>5.8</option>
+                                                    <option>5.9</option>
+                                                    <option>5.10</option>
+                                                    <option>5.11</option>
+                                                    <option>5.12</option>
+                                                    <option>5.13</option>
+                                                    <option>5.14</option>
+                                                    <option>5.15</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div id="routesNewRoutePitchesDiv">
+                                            <label for="routesNewRoutePitches">Pitches:</label>
+                                            <input type="text" class="form-control" id="routesNewRoutePitches" autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <div class="form-row" id="routeDetailsDiv">
+                                        <div class="btn-group" data-toggle="buttons" aria-label="Route Details" id="routeDetails">
+                                            <label class="btn btn-info">
+                                                <input type="radio" name="routedetails" id="routedetails-send">
+                                                Send
+                                            </label>
+                                            <label class="btn btn-info">
+                                                <input type="radio" name="routedetails" id="routedetails-flash">
+                                                Flash
+                                            </label>
+                                            <label class="btn btn-info">
+                                                <input type="radio" name="routedetails" id="routedetails-onsight">
+                                                Onsight
+                                            </label>
+                                            <label class="btn btn-info">
+                                                <input type="radio" name="routedetails" id="routedetails-project">
+                                                Project
+                                            </label>
+                                        </div>
+                                        <div class="btn-group" data-toggle="buttons" id="firstAscentCheck">
+                                            <label class="btn btn-info">
+                                                <input type="checkbox" name="firstascent" autocomplete="off">
+                                                First Ascent
+                                            </label>
+                                        </div>
+                                        <div class="btn-group" data-toggle="buttons" aria-label="Route Safety" id="routeSafety">
+                                            <label class="btn btn-danger">
+                                                <input type="radio" name="routesafety">
+                                                PG-13
+                                            </label>
+                                            <label class="btn btn-danger">
+                                                <input type="radio" name="routesafety">
+                                                R
+                                            </label>
+                                            <label class="btn btn-danger">
+                                                <input type="radio" name="routesafety">
+                                                X
+                                            </label>
+                                        </div>
+                                        <div id="routesNewRouteAttemptsDiv">
+                                            <label for="routesNewRouteAttempts">Attempts:</label>
+                                            <input type="text" class="form-control" id="routesNewRouteAttempts" autocomplete="off">
+                                        </div>
+                                        <div id="routesNewRouteSubmitDiv">
+                                            <input id="routesNewRouteSubmit" class="btn btn-success" value="Submit" type="submit">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="myRoutesTable">
+                    <table class="table table-hover">
+                        <thead class="thead-default">
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Grade</th>
+                                <th>Status</th>
+                                <th>Top Rope</th>
+                                <th>Rating</th>
+                                <th>Pitches</th>
+                                <th>Attempts</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-danger">
+                                <th scope="row">1</th>
+                                <td>New Pair</td>
+                                <td>Boulder</td>
+                                <td>V7</td>
+                                <td>Send</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>6</td>
+                            </tr>
+                            <tr class="table-danger">
+                                <th scope="row">2</th>
+                                <td>Suzie A</td>
+                                <td>Boulder</td>
+                                <td>V3</td>
+                                <td>Onsight</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>1</td>
+                            </tr>             
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var navProperties = {
+                mainNav: "_nav.html",
+                currentSection: "fitness"
+            };
+        </script>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+        <script src="navigation.js"></script>
+    </body>
+</html>
