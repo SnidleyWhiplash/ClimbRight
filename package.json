@@ -1,7 +1,8 @@
 {
-  "name": "ClimbRight",
+  "name": "climbright",
   "version": "1.0.0",
   "description": "A progress tracker and workout organizer for climbers and boulderers.",
+  "license": "UNLICENSED",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

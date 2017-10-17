@@ -1,3 +1,3 @@
 import 'bootstrap'
-import './navigation.ts'
+import './navigation.ts';
 import './main.scss';
