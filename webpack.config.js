@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const extractSass = new ExtractTextPlugin({
@@ -12,7 +13,7 @@ module.exports = {
             test: /\.scss$/,
             use: extractSass.extract({
                 use: [{
-                    loader: "css-loader"
+                    loader: "css-loader?url=false"
                 }, {
                     loader: "sass-loader"
                 }],
@@ -24,7 +25,12 @@ module.exports = {
             test: /\.tsx?$/,
             use: 'ts-loader',
             exclude: /node_modules/
-        }]
+        },
+        {
+            test    : /\.(png|jpg|svg)$/,
+            include : path.join(__dirname, 'img'),
+            loader  : 'url-loader?limit=30000&name=images/[name].[ext]'
+        }] // inline base64 URLs for <=30k images, direct URLs for the rest
     },
     plugins: [
         new webpack.ProvidePlugin({
@@ -34,5 +40,9 @@ module.exports = {
             Popper: ['popper.js', 'default'],
         }),
         extractSass
-    ]
+    ],
+    devtool: 'source-map',
+    output: {
+        publicPath: "http://localhost:8080"
+    }
 };

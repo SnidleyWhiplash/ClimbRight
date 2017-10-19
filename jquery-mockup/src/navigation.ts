@@ -8,6 +8,9 @@ $(function() {
             $(`#${navProperties.currentSection}-link`).addClass("active");
         });
     });
+    $("#submenuAndBreadcrumbs").load("_submenu.html", function() {
+        $(`#${navProperties.subSection}-link`).addClass("active");
+    });
 
     /* login.html *************************************************************** */
     $("#loginUsernameRetrieve").on("click", function() {
@@ -38,6 +41,7 @@ $(function() {
         var type = $(this).val();
         $("div.desc").hide();
         $("#routesNewRouteGrade"+type).css({'display':"inline-block"});
+        $("#topRopeLabel").removeClass("active");
     });
     $("input[value=YDS]").on("change", function() {
         $("#topRopeCheck").show();

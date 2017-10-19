@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
         <!-- Font Awesome CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel=stylesheet href="dist/main.css">
+        <link rel=stylesheet href="dist/main.bundle.css">
         
         <title>Climb Right</title>
     </head>
@@ -17,24 +17,7 @@
         <div id="header-placeholder"></div>
         <div class="container-fluid" id="main-content">
             <div id="submenuAndBreadcrumbs" class="submenucontainer">
-                <div class="submenureserve">
-                    <!-- enter reserve -->
-                    <div class="content submenu container">
-                        <nav class="navbar navbar-expand-sm navbar-dark" id="submenu">
-                            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                                <div class="navbar-nav mr-auto">
-                                    <a class="nav-item nav-link" href="tracker.html">My Tracker</a>
-                                    <a class="nav-item nav-link active" href="routes.html">My Routes</a>
-                                    <a class="nav-item nav-link" href="#">My Progress</a>
-                                </div>
-                                <div class="navbar-nav ml-auto form-inline">
-                                    <input type="text" readonly class="form-control" id="dateField"/>
-                                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </nav>
-                    </div>    
-                </div>
+                
             </div>
             <div id="main" class="container">
                 <h2 class="main-title">My Routes</h2>
@@ -55,21 +38,21 @@
                                             <input type="text" class="form-control" id="routesNewRouteName" autocomplete="off">
                                         </div>
                                         <div class="btn-group" data-toggle="buttons" aria-label="Route Types" id="routeTypes">
-                                            <label class="btn btn-outline-dark">
+                                            <label class="btn btn-outline-dark" id="Trad">
                                                 <input type="radio" name="routetypes" value="YDS">
                                                 Trad
                                             </label>
-                                            <label class="btn btn-outline-dark">
+                                            <label class="btn btn-outline-dark" id="Sport">
                                                 <input type="radio" name="routetypes" value="YDS">
                                                 Sport
                                             </label>
-                                            <label class="btn btn-outline-dark">
+                                            <label class="btn btn-outline-dark" id="Boulder">
                                                 <input type="radio" name="routetypes" value="VS">
                                                 Boulder
                                             </label>
                                         </div>
                                         <div class="btn-group" data-toggle="buttons" id="topRopeCheck">
-                                            <label class="btn btn-outline-dark">
+                                            <label class="btn btn-outline-dark" id="topRopeLabel">
                                                 <input type="checkbox" name="toprope" autocomplete="off">
                                                 Top Rope
                                             </label>
@@ -77,38 +60,38 @@
                                         <div id="routesNewRouteGrade">
                                             <label for="routesNewRouteGrade">Grade:</label>
                                             <div class="desc" id="routesNewRouteGradeVS">
-                                                <select class="form-control">
-                                                    <option>V0</option>
-                                                    <option>V1</option>
-                                                    <option>V2</option>
-                                                    <option>V3</option>
-                                                    <option>V4</option>
-                                                    <option>V5</option>
-                                                    <option>V6</option>
-                                                    <option>V7</option>
-                                                    <option>V8</option>
-                                                    <option>V9</option>
-                                                    <option>V10</option>
-                                                    <option>V11</option>
-                                                    <option>V12</option>
-                                                    <option>V13</option>
+                                                <select class="form-control" id="routesNewRouteGradeVSSelect">
+                                                    <option value="V0">V0</option>
+                                                    <option value="V1">V1</option>
+                                                    <option value="V2">V2</option>
+                                                    <option value="V3">V3</option>
+                                                    <option value="V4">V4</option>
+                                                    <option value="V5">V5</option>
+                                                    <option value="V6">V6</option>
+                                                    <option value="V7">V7</option>
+                                                    <option value="V8">V8</option>
+                                                    <option value="V9">V9</option>
+                                                    <option value="V10">V10</option>
+                                                    <option value="V11">V11</option>
+                                                    <option value="V12">V12</option>
+                                                    <option value="V13">V13</option>
                                                 </select>
                                             </div>
                                             <div class="desc" id="routesNewRouteGradeYDS">
-                                                <select class="form-control">
-                                                    <option>5.3</option>
-                                                    <option>5.4</option>
-                                                    <option>5.5</option>
-                                                    <option>5.6</option>
-                                                    <option>5.7</option>
-                                                    <option>5.8</option>
-                                                    <option>5.9</option>
-                                                    <option>5.10</option>
-                                                    <option>5.11</option>
-                                                    <option>5.12</option>
-                                                    <option>5.13</option>
-                                                    <option>5.14</option>
-                                                    <option>5.15</option>
+                                                <select class="form-control" id="routesNewRouteGradeYDSSelect">
+                                                    <option value="5.3">5.3</option>
+                                                    <option value="5.4">5.4</option>
+                                                    <option value="5.5">5.5</option>
+                                                    <option value="5.6">5.6</option>
+                                                    <option value="5.7">5.7</option>
+                                                    <option value="5.8">5.8</option>
+                                                    <option value="5.9">5.9</option>
+                                                    <option value="5.10">5.10</option>
+                                                    <option value="5.11">5.11</option>
+                                                    <option value="5.12">5.12</option>
+                                                    <option value="5.13">5.13</option>
+                                                    <option value="5.14">5.14</option>
+                                                    <option value="5.15">5.15</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -119,39 +102,39 @@
                                     </div>
                                     <div class="form-row" id="routeDetailsDiv">
                                         <div class="btn-group" data-toggle="buttons" aria-label="Route Details" id="routeDetails">
-                                            <label class="btn btn-info">
+                                            <label class="btn btn-info" id="Send">
                                                 <input type="radio" name="routedetails" id="routedetails-send">
                                                 Send
                                             </label>
-                                            <label class="btn btn-info">
+                                            <label class="btn btn-info" id="Flash">
                                                 <input type="radio" name="routedetails" id="routedetails-flash">
                                                 Flash
                                             </label>
-                                            <label class="btn btn-info">
+                                            <label class="btn btn-info" id="Onsight">
                                                 <input type="radio" name="routedetails" id="routedetails-onsight">
                                                 Onsight
                                             </label>
-                                            <label class="btn btn-info">
+                                            <label class="btn btn-info" id="Project">
                                                 <input type="radio" name="routedetails" id="routedetails-project">
                                                 Project
                                             </label>
                                         </div>
                                         <div class="btn-group" data-toggle="buttons" id="firstAscentCheck">
-                                            <label class="btn btn-info">
+                                            <label class="btn btn-info" id="firstAscentLabel">
                                                 <input type="checkbox" name="firstascent" autocomplete="off">
                                                 First Ascent
                                             </label>
                                         </div>
                                         <div class="btn-group" data-toggle="buttons" aria-label="Route Safety" id="routeSafety">
-                                            <label class="btn btn-danger">
+                                            <label class="btn btn-danger" id="PG-13">
                                                 <input type="radio" name="routesafety">
                                                 PG-13
                                             </label>
-                                            <label class="btn btn-danger">
+                                            <label class="btn btn-danger" id="R">
                                                 <input type="radio" name="routesafety">
                                                 R
                                             </label>
-                                            <label class="btn btn-danger">
+                                            <label class="btn btn-danger" id="X">
                                                 <input type="radio" name="routesafety">
                                                 X
                                             </label>
@@ -161,7 +144,7 @@
                                             <input type="text" class="form-control" id="routesNewRouteAttempts" autocomplete="off">
                                         </div>
                                         <div id="routesNewRouteSubmitDiv">
-                                            <input id="routesNewRouteSubmit" class="btn btn-success" value="Submit" type="submit">
+                                            <input id="routesNewRouteSubmit" class="btn btn-success" value="Submit" type="button">
                                         </div>
                                     </div>
                                 </div>
@@ -169,8 +152,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="row" id="myRoutesTable">
-                    <table class="table table-hover">
+                <div class="row" id="myRoutesTableDiv">
+                    <table class="table table-hover" id="myRoutesTable">
                         <thead class="thead-default">
                             <tr>
                                 <th>#</th>
@@ -216,13 +199,10 @@
         <script>
             var navProperties = {
                 mainNav: "_nav.html",
-                currentSection: "fitness"
+                currentSection: "fitness",
+                subSection: "routes"
             };
         </script>
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-        <script src="navigation.js"></script>
+        <script src="dist/bundle.js"></script>
     </body>
 </html>

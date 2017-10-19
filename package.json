@@ -1,5 +1,5 @@
 {
-  "name": "climbright",
+  "name": "climb-right",
   "version": "1.0.0",
   "description": "A progress tracker and workout organizer for climbers and boulderers.",
   "license": "UNLICENSED",
@@ -11,16 +11,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SnidleyWhiplash/ClimbRight.git"
+    "url": "git+https://github.com/SnidleyWhiplash/climb-right.git"
   },
   "dependencies": {
-    "express": "^4.15.4",
-    "jquery": "^3.2.1",
     "bootstrap-4": "^4.0.0",
-    "popper.js": "1.12.5"
+    "express": "^4.15.4",
+    "file-loader": "^1.1.5",
+    "jquery": "^3.2.1",
+    "popper.js": "1.12.5",
+    "url-loader": "^0.6.2"
   },
   "devDependencies": {
-    "@types/jquery": "^3.2.12",    
+    "@types/jquery": "^3.2.12",
     "webpack": "^3.6.0",
     "node-sass": "^4.5.3",
     "css-loader": "^0.28.7",
