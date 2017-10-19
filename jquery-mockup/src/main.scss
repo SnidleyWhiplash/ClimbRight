@@ -231,7 +231,7 @@
   
   #trackerInputExerciseDatabase {
     margin-left: 5px;
-    width: 250px;
+    width: 175px;
     margin-bottom: 5px;
   }
   
@@ -240,7 +240,7 @@
   }
   
   #trackerMatchingExercise {
-    width: 335px;
+    width: 255px;
   }
   
   #trackerSelectExerciseDropdown {
@@ -255,9 +255,8 @@
     }
   }
   
-  #trackerRepCount, #trackerSetCount {
+  #trackerRepCount, #trackerSetCount, #trackerTime {
     display: inline;
-    width: 60px;
   }
   
   #arrowContainer {
@@ -291,9 +290,10 @@
     height: 85%;
   }
   
-  #trackerSaveAdded {
+  #trackerSaveAdded, #trackerDeleteChecked {
     float: right;
     margin-top: 10px;
+    margin-left: 10px;
   }
   
   /* Routes Page Content Styling ************************************************************** */
