@@ -61,4 +61,15 @@ $(function() {
         $("#routesNewRouteAttempts").prop("readonly", false);
         $("#routesNewRouteAttempts").val("");
     });
+    /* tracker.html *************************************************************** */
+    $("#trackerSearchExercises").click(function() {
+        $("#trackerSearchDatabaseDiv").show();
+        $("#trackerSelectDropdownDiv").hide();
+        $("#trackerCountFields").show();
+    });
+    $("#trackerSelectExercises").click(function() {
+        $("#trackerSelectDropdownDiv").show();
+        $("#trackerSearchDatabaseDiv").hide();
+        $("#trackerCountFields").show();
+    });
 });

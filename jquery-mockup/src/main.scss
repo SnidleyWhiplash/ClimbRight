@@ -18,6 +18,10 @@
     padding-left: 260px;
   }
   
+  .mg-lf-10 {
+    margin-left: 10px;
+  }
+
   .pad-left-20 {
     padding-left: 20px;
   }
@@ -229,12 +233,33 @@
   
   /*  Tracker Page Content Styling ************************************************************** */
   
+  #trackerNewExerciseForm {
+    width: 450px;
+  }
+
   #trackerInputExerciseDatabase {
     margin-left: 5px;
     width: 175px;
     margin-bottom: 5px;
   }
   
+  #trackerSearchExercises, #trackerSelectExercises {
+    margin-left: 10px;
+  }
+
+  #trackerSearchDatabaseDiv, #trackerSelectDropdownDiv, #trackerCountFields {
+    display: none;
+  }
+
+  #database-icon, #dropdown-icon {
+    text-shadow: 1px 1px 1px #ccc;
+    font-size: 1em;
+    margin-right: 8px;
+    margin-bottom: 3px;
+    padding: 3px;
+    width: 5px;
+  }
+
   #exerciseSearchBtn {
     margin-left: 5px;
   }
@@ -249,19 +274,19 @@
   
   #trackerCountFields {
     position: relative;
-    top: 40px;
     label {
       margin-right: 5px;
     }
   }
   
-  #trackerRepCount, #trackerSetCount, #trackerTime {
-    display: inline;
+  #trackerWeightLabel, #trackerTimeLabel {
+    margin-top: 10px;
   }
-  
+
   #arrowContainer {
     line-height: 221px;
     text-align: center;
+    right: 15px;
   }
   
   #addExercise {
@@ -304,7 +329,7 @@
     padding-right: 5px;
   }
   
-  #plusIcon {
+  .plusIcon {
     text-shadow: 1px 1px 1px #ccc;
     font-size: 1em;
     margin-right: 3px;
