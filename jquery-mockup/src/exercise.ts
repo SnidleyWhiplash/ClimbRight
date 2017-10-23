@@ -31,12 +31,14 @@ export class Exercise {
     }
 
     static logExercise(exercise: Exercise) {
+        console.log("pre log - " + table_row_count);
         table_row_count++;
-        var markup = "<tr class='table-dark'><th scope='row'>" + table_row_count + "</th><td>" 
+        var markup = "<tr class='table-dark'><th scope='row' class='row-num'>" + table_row_count + "</th><td>" 
         + exercise.name + "</td><td>" + exercise.reps + "</td><td>" + exercise.sets + "</td><td>"
         + exercise.weight + " " + exercise.weight_unit + "</td><td>" + exercise.time + " "
         + exercise.time_unit + "</td><td><input type='checkbox' name='remove'></td></tr>"
         $("#myExercisesTable tbody").append(markup);
+        console.log("post log - " + table_row_count);
     }
 }
 
@@ -54,6 +56,16 @@ $("#trackerDeleteChecked").click(function() {
         if($(this).is(":checked")) {
             table_row_count--;
             $(this).parents("tr").remove();
+            console.log("after delete - " + table_row_count);
         }
     });
+    renumber();
 });
+
+function renumber() {
+    table_row_count = 0;
+    $("#myExercisesTable tbody").find(".row-num").each(function() {
+        $(this).html("" + ++table_row_count);
+        console.log("after renumber - " + table_row_count);
+    });
+}
