@@ -46,6 +46,11 @@ export class Exercise {
 
 var exercise = new Exercise();
 
+$("#removeAllCheck").click(function() {
+    $("input[type='checkbox']").prop("checked", true);
+});
+
+
 $("#addExercise").click(function() {
     exercise = Exercise.fetchDetails();
     Exercise.logExercise(exercise);
@@ -68,4 +73,4 @@ function renumber() {
         $(this).html("" + ++table_row_count);
         console.log("after renumber - " + table_row_count);
     });
-}
+};
