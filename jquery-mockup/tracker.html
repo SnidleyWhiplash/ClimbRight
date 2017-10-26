@@ -18,76 +18,27 @@
         <div class="container-fluid" id="main-content">
             <div id="submenuAndBreadcrumbs" class="submenucontainer">
             </div>
-            <div id="main" class="container">
-                <h2 class="main-title">Add an Exercise to Your Tracker</h2>
-                <div class="row" id="trackerExerciseButtons">
-                    <button type="button" class="btn btn-warning btn-sm" id="trackerSearchExercises">
-                        <i class="fa fa-database" aria-hidden="true" id="database-icon"></i>
-                        Search Database
-                    </button>
-                    <button type="button" class="btn btn-warning btn-sm" id="trackerSelectExercises">
-                        <i class="fa fa-caret-square-o-down" aria-hidden="true" id="dropdown-icon"></i>
-                        Select Dropdown
-                    </button>
-                </div>
-                <div class="row" id="page-content">
-                    <form class="col-md-6" id="trackerNewExerciseForm">
-                        <div class="form-row">
-                            <div class="col-md-6 mg-lf-10"> 
-                                    <!--form accept-charset="UTF-8" action="/exercise/lookup" method="post"-->
-                                        <div class="form-group" id="trackerSearchDatabaseDiv">
-                                            <label class="form-control-label" for="trackerInputExerciseDatabase">
-                                                Search for exercise by name:
-                                            </label>
-                                            <div class="form-row">
-                                                <input type="text" class="form-control" id="trackerInputExerciseDatabase" name="exerciseSearch" autocomplete="off">
-                                                <input type="submit" class="btn btn-success" value="Search" id="exerciseSearchBtn">
-                                            </div>
-                                            <label class="form-control-label" for="trackerMatchingExercise">
-                                                Matching exercises:
-                                            </label>
-                                            <select multiple class="form-control" id="trackerMatchingExercise" rows="12"></select>
-                                        </div>
-                                    <!--/form-->
-                                    <div class="form-group" id="trackerSelectDropdownDiv">
-                                        <label class="form-control-label" for="trackerSelectExerciseDropdown">
-                                            Choose an exercise from the list:
-                                        </label>
-                                        <select class="form-control" id="trackerSelectExerciseDropdown">
-                                            <option selected disabled>Choose an Exercise</option>
-                                            <option>Burpees</option>
-                                            <option>Chinups</option>
-                                            <options>Crunches</options>
-                                            <option>Flutter Kicks</option>
-                                            <option>Jumping Lunges</option>
-                                            <option>Levers</option>
-                                            <option>Lunges, Standard</option>
-                                            <option>One-arm Inverted Row</option>
-                                            <option>Plank, Standard</option>
-                                            <option>Plank, Side</option>
-                                            <option>Plank, Single Leg</option>
-                                            <option>Pullups</option>
-                                            <option>Pullups, Thumbless</option>
-                                            <option>Pushups</option>
-                                            <option>Pushups, Diamond</option>
-                                            <option>Pushups, Raise Leg</option>
-                                            <option>Pushups, Spiderman</option>
-                                            <option>Reverse Cable Fly</option>
-                                            <option>Six Inches</option>
-                                            <option>Slow Bicycle</option>
-                                            <option>Squats</option>
-                                            <option>Wall Sits</option>
-                                        </select>
-                                    </div>   
+            <div class="container card" id="homeMain">
+                <div class="card-body">
+                    <h2 class="card-title main-title">Add an Exercise to Your Tracker</h2>
+                    <form id="trackerAddExerciseForm">
+                        <div class="row">
+                            <div class="form-group col-md-3" id="trackerExerciseSelectDiv">
+                                <label class="form-control-label" for="trackerExerciseSelect">
+                                    Select an exercise from the list:
+                                </label>
+                                <select class="form-control" id="trackerExerciseSelect">
+                                    <option selected disabled>Choose an Exercise</option>
+                                </select>
                             </div>
-                            <div class="col-md-5" id="trackerCountFields">
+                            <div class="form-group col-md-2" id="trackerExerciseDetailsDiv">
                                 <div class="form-row">
                                     <div class="col-md-6">
                                         <label class="form-control-label" for="trackerRepCount">
                                             Reps:
                                         </label>
                                         <input type="text" class="form-control" id="trackerRepCount" name="repCount" autocomplete="off">
-                                    </div>                    
+                                    </div>
                                     <div class="col-md-6">
                                         <label class="form-control-label" for="trackerSetCount">
                                             Sets:
@@ -132,21 +83,18 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </form>
-                    <div class="col-md-1" id="arrowContainer">
-                        <span class="btn btn-warning btn-sm" id="addExercise">
-                            <i class="fa fa-arrow-right" aria-hidden="true"></i><input type="button" value="" id="addExerciseBtn">
-                        </span>
-                    </div>
-                    <div class="col-md-5">
-                        <div class="form-group" id="addedExercises">
-                            <label class="form-control-label" for="trackerAddedExercisePane">
-                                Added exercises:
-                            </label>
-                            <!--select multiple class="form-control" id="trackerAddedExercisePane" rows="100"-->
-                                <table class="table table-bordered table-hover" id="myExercisesTable">
-                                    <thead class="thead-default">
+                            <div class="col-md-2" id="arrowContainer">
+                                <span class="btn btn-warning btn-sm" id="addExercise">
+                                    <i class="fa fa-arrow-right" aria-hidden="true"></i><input type="button" value="" id="addExerciseBtn">
+                                </span>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-group" id="addedExercises">
+                                    <label class="form-control-label" for="trackerAddedExercisePane">
+                                        Added exercises:
+                                    </label>
+                                    <table class="table table-bordered table-hover" id="myExercisesTable">
+                                        <thead class="thead-default">
                                             <tr>
                                                 <th>#</th>
                                                 <th>Name</th>
@@ -159,13 +107,14 @@
                                         </thead>
                                         <tbody>  
                                         </tbody>
-                                </table>
-                            <!--/select-->
-                            <input type="button" class="btn btn-danger" value="Delete" id="trackerDeleteChecked">
-                            <input type="submit" class="btn btn-info" value="Submit" id="trackerSaveAdded">
+                                    </table>
+                                    <input type="button" class="btn btn-danger" value="Delete" id="trackerDeleteChecked">
+                                    <input type="submit" class="btn btn-info" value="Submit" id="trackerSaveAdded">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>  
+                    </form>
+                </div>
             </div>
         </div>
 

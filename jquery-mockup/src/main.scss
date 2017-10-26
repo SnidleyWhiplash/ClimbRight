@@ -231,6 +231,48 @@
     padding: 0;
   }
   
+  /* Home Page Content Styline ************************************************************** */
+
+  #homeMain {
+    background: powderblue;
+  }
+
+  #homeExercisesSelect {
+    height: 300px;
+  }
+
+  #homeArrowContainer {
+    line-height: 348px;
+    text-align: center;
+  }
+
+  #homeAddExercise {
+    border-radius: 30%;
+    display: inline-block;
+    > {
+      i {
+        color: black;
+        width: 100%;
+        text-align: center;
+      }
+      input {
+        background: none;
+        color: white;
+        padding: 0;
+        border: 0;
+      }
+    }
+  }
+
+  #homeExercisesAdded {
+    height: 200px;
+  }
+
+  #homeDeleteSelected {
+    float: right;
+    margin-top: 10px;
+  }
+
   /*  Tracker Page Content Styling ************************************************************** */
   
   #trackerNewExerciseForm {
@@ -288,7 +330,7 @@
     text-align: center;
     right: 15px;
   }
-  
+
   #addExercise {
     border-radius: 30%;
     display: inline-block;

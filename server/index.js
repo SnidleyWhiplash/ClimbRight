@@ -1,15 +1,13 @@
-const http = require("express");
-const handler = require("./httpHandler.js")
+const express = require("express");
+const handler = require("./httpHandler");
+const trackerController = require("./trackerController");
 
-const server = http();
+const server = express();
 
-server.use("/json", function(res, res, next) {
-    res.send({ happy: "Yom Kippur"})
-    next();
-});
-
+server.use("/client", express.static("./jquery-mockup"));
 server.use("/old", handler.main);
+server.use("/trackerEntry", trackerController.router);
 
-server.listen(3000);
+server.listen(8080);
 
-console.log("http://localhost:3000");
+console.log("http://localhost:8080");
